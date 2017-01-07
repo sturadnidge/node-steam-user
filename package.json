@@ -1,6 +1,6 @@
 {
   "name": "node-steam-user",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Minimal implementation of a user module for `node-steam`",
   "engines": {
     "node": "^4.1"
@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4",
-    "node-steam":"*",
+    "node-steam": "*",
     "steamid": "^1.1"
   }
 }
