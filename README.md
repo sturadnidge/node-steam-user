@@ -27,16 +27,14 @@ Tells Steam you are playing game(s). `gamesPlayed` is a [`CMsgClientGamesPlayed`
 
 ### 'loggedOn'
 
-Emitted upon a successful logOn(), returns a decoded  [`CMsgClientLogonResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver.proto#L94) object.
+Emitted when a  [`CMsgClientLogonResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver.proto#L94) message is received with an `eresult` indicating successful logon. Returns a decoded  `CMsgClientLogonResponse` object.
 
 ### 'logOnError'
 
-Emitted upon an unsuccessful logOn(), returns a decoded  [`CMsgClientLogonResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver.proto#L94) object. To know what happened, have a look at the standard (eresults)[https://github.com/SteamRE/SteamKit/blob/master/Resources/SteamLanguage/eresult.steamd] and handle accordingly.
+Emitted when a  [`CMsgClientLogonResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver.proto#L94) message is received with an `eresult` indicating unsuccessful logon. Returns a decoded  `CMsgClientLogonResponse` object. To know what happened, have a look at the standard [Steam eresults](https://github.com/SteamRE/SteamKit/blob/master/Resources/SteamLanguage/eresult.steamd) and handle accordingly.
 
 ### 'updateMachineAuth'
 
-Emitted when an invalid (or no) sentry file is used.
-* [`CMsgClientUpdateMachineAuth`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver_2.proto)
-* `callback`
+Emitted when a [`CMsgClientUpdateMachineAuth`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver_2.proto) message is received, usually in response to an invalid (or no) sentry file. Returns the decoded `CMsgClientUpdateMachineAuth` object and a `callback`.
 
 Call `callback` with a [`CMsgClientUpdateMachineAuthResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver_2.proto) object to accept this sentry update.
