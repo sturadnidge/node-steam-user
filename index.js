@@ -3,7 +3,7 @@
 
 var _            = require('lodash'),
     EventEmitter = require('events').EventEmitter,
-    Steam        = require('../node-steam'),
+    Steam        = require('node-steam'),
     SteamID      = require('steamid');
 
 var EMsg   = Steam.EMsg,
