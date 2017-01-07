@@ -1,0 +1,24 @@
+{
+  "name": "node-steam-user",
+  "version": "0.0.1",
+  "description": "Minimal implementation of a user module for `node-steam`",
+  "engines": {
+    "node": "^4.1"
+  },
+  "os" : [ "!win32" ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stu Radnidge",
+  "contributors": [
+    {
+      "name": "Nicholas",
+      "email": "vvnicholas@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash":"^4",
+    "steamid": "^1.1"
+  }
+}
